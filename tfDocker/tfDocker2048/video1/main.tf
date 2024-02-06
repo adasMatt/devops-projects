@@ -30,21 +30,21 @@ resource "docker_container" "game" {
 
   ports {
     internal = 80
-    external = 8000       # this is the port the application will run on
+    external = 625       # this is the port the application will run on, see registered ports https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
   }
 
   # This modifies the nginx docker image every time terraform is run. Not preferrable for large projects.
   volumes {
     # explore pulling from Dockerhub instead of modifying the regular nginx like this every time
-    host_path      = "/home/madav/codePlatoon/w07-09ELKStackAndDocker/dockerStuff/game2048Docker/index.html"  
+    host_path      = "/home/madav/video1/filesForWebsite/index.html"  
     container_path = "/usr/share/nginx/html/index.html"
   }
   volumes {
-    host_path      = "/home/madav/codePlatoon/w07-09ELKStackAndDocker/dockerStuff/game2048Docker/js/"
+    host_path      = "/home/madav/video1/filesForWebsite/js/"
     container_path = "/usr/share/nginx/html/js"
   }
   volumes {
-    host_path      = "/home/madav/codePlatoon/w07-09ELKStackAndDocker/dockerStuff/game2048Docker/style/"
+    host_path      = "/home/madav/video1/filesForWebsite/style/"
     container_path = "/usr/share/nginx/html/style"
   }
 

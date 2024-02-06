@@ -33,16 +33,14 @@ Steps:
   
 The magic of Terraform shown here, is that once you have a Docker container, the image and container can be built on any local machine to test applications essentially using a single `terraform apply` command with all relevant information contained within a main.tf file, rather than using `docker build`, `docker run`, etc with all of the messy details those docker commands need.
 
-## Architecture Diagram placeholder
-An architecture diagram at the moment might look like:  
-```
-Dev team -> Terraform files (containing: terraform provider registry, docker provider) -> docker images -> local website access for performance testing
-```
 # Expanding on Documentation Tutorial
 - Make a custom [Docker image (use 2048)](https://github.com/adasMatt/mattDotNerd-devops-and-data-projects/tree/master/tfDocker/tfDocker2048)
+<!--
+
   - see notes for expanding this idea
   - try docker network with multiple docker containers
   - maybe the other container is a simple database to store a table of scores from each match? (do sql queries to show db table)
 - Add CI/CD with GitHub Actions?
 - Use Docker network with multiple containers (webserver, db, etc)
 - Add architecture diagrams
+-->
